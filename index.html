@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Style Weather App</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/allmincss">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="phone-frame" id="phoneFrame">
+        <div class="bg-overlay"></div>
+
+        <div class="content-container">
+            <!-- Header Controls -->
+            <div class="header-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="cityInput" placeholder="Search city... (e.g. London)" value="Karachi">
+                </div>
+                <button class="action-btn" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+
+            <!-- Current Weather Hero Section -->
+            <div class="weather-hero">
+                <h2 class="city-name" id="cityName">Karachi</h2>
+                <h1 class="temp-main"><span id="currentTemp">--</span>°</h1>
+                <p class="weather-condition" id="weatherCondition">Loading...</p>
+                <p class="high-low">H: <span id="maxTemp">--</span>° L: <span id="minTemp">--</span>°</p>
+            </div>
+
+            <!-- Hourly Forecast Card -->
+            <div class="glass-card">
+                <div class="card-title">
+                    <i class="fa-regular fa-clock"></i> Hourly Forecast
+                </div>
+                <div class="hourly-list" id="hourlyList">
+                    <!-- Hourly items dynamically injected -->
+                </div>
+            </div>
+
+            <!-- 7-Day Forecast Card -->
+            <div class="glass-card">
+                <div class="card-title">
+                    <i class="fa-regular fa-calendar-days"></i> 7-Day Forecast
+                </div>
+                <div class="daily-list" id="dailyList">
+                    <!-- Daily items dynamically injected -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
